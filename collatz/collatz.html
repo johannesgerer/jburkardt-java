@@ -1,0 +1,121 @@
+<html>
+
+  <head>
+    <title>
+      COLLATZ - The Collatz Sequence
+    </title>
+  </head>
+
+  <body bgcolor="#EEEEEE" link="#CC0000" alink="#FF3300" vlink="#000055">
+
+    <h1 align = "center">
+      COLLATZ <br> The Collatz Sequence
+    </h1>
+
+    <hr>
+
+    <p>
+      <b>COLLATZ</b> is a JAVA routine for computing the
+      Collatz sequence.
+    </p>
+
+    <p>
+      The rules for generation of the Collatz sequence are recursive.
+      If <b>T</b> is the current entry of the sequence, (<b>T</b> is
+      assumed to be a positive integer), then the next
+      entry, <b>U</b> is determined as follows:
+      <ol>
+        <li>
+          if <b>T</b> is 1, terminate the sequence;
+        </li>
+        <li>
+          else if <b>T</b> is even, <b>U</b> = <b>T</b>/2.
+        </li>
+        <li>
+          else (if <b>T</b> is odd and not 1), <b>U</b> = 3*<b>T</b>+1;
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      Although the Collatz sequence seems to be finite for every
+      starting point, this has not been proved.  Over the range of
+      starting values that have been examined, a great irregularity
+      has been observed in the number of entries in the corresponding
+      sequence.
+    </p>
+
+    <p>
+      The Collatz sequence is also known as the "hailstone" sequence or
+      the "3n+1" sequence.
+    </p>
+
+    <h3 align = "center">
+      Related Data and Programs:
+    </h3>
+
+    <p>
+      <b>COLLATZ</b> is also available in
+      <a href = "../../math_src/collatz/collatz.html">
+      a MATHEMATICA version</a> and
+      <a href = "../../m_src/collatz/collatz.html">
+      a MATLAB version</a>.
+    </p>
+
+    <p>
+      <a href = "../../m_src/sequence_streak/sequence_streak.html">
+      SEQUENCE_STREAK</a> is a MATLAB program that can be used to
+      make a "streak plot" of a Collatz sequence for a particular
+      starting value, or for the length of the Collatz sequence for
+      a number of starting values.
+    </p>
+
+    <h3 align = "center">
+      Reference:
+    </h3>
+
+    <p>
+      <ol>
+        <li>
+          Eric Weisstein,<br>
+          "The Collatz Problem",<br>
+          CRC Concise Encyclopedia of Mathematics,<br>
+          CRC 1998.
+        </li>
+      </ol>
+    </p>
+
+    <h3 align = "center">
+      Source Code:
+    </h3>
+
+    <p>
+      <ul>
+        <li>
+          <a href = "collatz.java">collatz.java</a>, 
+          computes the Collatz sequence for a given starting point;
+        </li>
+        <li>
+          <a href = "collatz_count.java">collatz_count.java</a>, 
+          returns the number of entries in the Collatz sequence 
+          for a given starting point;
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      You can go up one level to <a href = "../java_src.html">
+      the JAVA source codes</a>.
+    </p>
+
+    <hr>
+
+    <i>
+      Last revised on 05 March 2006.
+    </i>
+
+    <!-- John Burkardt -->
+
+  </body>
+
+</html>

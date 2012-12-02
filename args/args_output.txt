@@ -1,0 +1,16 @@
+ 
+  Mon Jun 30 14:17:59 EDT 2008
+ 
+ARGS:
+  Demonstrate command line argument retrieval.
+ 
+  Number of command line arguments is 3
+ 
+1
+apple
+3.1415
+ 
+ARGS:
+  Normal end of execution.
+ 
+  Mon Jun 30 14:17:59 EDT 2008

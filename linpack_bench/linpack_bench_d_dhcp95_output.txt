@@ -1,0 +1,1 @@
+Mflops/s: 227.283  Time: 2.94 secs  Norm Res: 10.1  Precision: 2.220446049250313E-16

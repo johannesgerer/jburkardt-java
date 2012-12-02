@@ -1,0 +1,231 @@
+<html>
+
+  <head>
+    <title>
+      LINPACK_BENCH - The LINPACK Benchmark
+    </title>
+  </head>
+
+  <body bgcolor="#EEEEEE" link="#CC0000" alink="#FF3300" vlink="#000055">
+
+    <h1 align = "center">
+      LINPACK_BENCH <br> The LINPACK Benchmark
+    </h1>
+
+    <hr>
+
+    <p>
+      <b>LINPACK_BENCH</b> is a <b>JAVA</b> script,
+      using double precision arithmetic,
+      which carries out the LINPACK benchmark.
+    </p>
+
+    <p>
+      The LINPACK benchmark tests the speed of a computer on a particular
+      computational task, namely the factorization of a large dense
+      matrix, and the solution of a related linear system.
+    </p>
+
+    <p>
+      The test problem requires the user to set up a random dense matrix
+      <b>A</b> of size <b>N</b> = 1000, and a right hand side vector <b>B</b>
+      which is the product of <b>A</b> and a vector <b>X</b> of all 1's.  
+      The first task is to compute an LU factorization of <b>A</b>.  The 
+      second task is to use the LU factorization to solve the linear system 
+      <blockquote>
+        <b>A</b> * <b>X</b> = <b>B</b>.
+      </blockquote>
+    </p>
+
+    <p>
+      The number of floating point operations required for these two
+      tasks is roughly
+      <blockquote>
+        ops = 2 * N*N*N / 3 + 2 * N * N,
+      </blockquote>
+      therefore, the "MegaFLOPS" rating, or millions of floating point
+      operations per second, can be found as
+      <blockquote>
+        mflops = ops / ( cpu * 1000000 ).
+      </blockquote>
+    </p>
+
+    <p>
+      <table border="1">
+        <tr>
+          <th>Language</th><th>Precision</th><th>Type</th><th>Machine</th><th>Comment</t><th>MegaFLOPS</th>
+        </tr>
+        <tr>
+          <td>Java</td><td>Double</td><td>Real</td><td>DHCP95 (Apple G5)</td><td>&nbsp;</td><td>227</td>
+        </tr>
+      </table>
+    </p>
+
+    <h3 align = "center">
+      Usage:
+    </h3>
+
+    <p>
+      <dl>
+        <dt>
+          javac linpack_bench_d
+        </dt>
+        <dd>
+          compiles the benchmark program, creating "linpack_bench_d.class".
+        </dd>
+        <dt>
+          java linpack_bench_d
+        </dt>
+        <dd>
+          runs the compiled program "linpack_bench_d.class".
+        </dd>
+      </dl>
+    </p>
+
+    <h3 align = "center">
+      Related Data and Programs:
+    </h3>
+
+    <p>
+      <a href = "../../f_src/linpack/linpack.html">
+      LINPACK</a>
+      is a FORTRAN90 library which 
+      supplies the solvers used by  <b>LINPACK_BENCH</b>.
+    </p>
+
+    <p>
+      <b>LINPACK_BENCH</b> is also available in
+      <a href = "../../c_src/linpack_bench/linpack_bench.html">
+      a C version</a> and
+      <a href = "../../cpp_src/linpack_bench/linpack_bench.html">
+      a C++ version</a> and
+      <a href = "../../f77_src/linpack_bench/linpack_bench.html">
+      a FORTRAN77 version</a> and
+      <a href = "../../f_src/linpack_bench/linpack_bench.html">
+      a FORTRAN90 version</a> and
+      <a href = "../../m_src/linpack_bench/linpack_bench.html">
+      a MATLAB version</a>.
+    </p>
+
+    <p>
+      <a href = "../../f_src/matmul/matmul.html">
+      MATMUL</a>
+      is an executable FORTRAN90 program which 
+      is an interactive matrix multiplication benchmark program.
+    </p>
+
+    <p>
+      <a href = "../../f77_src/mdbnch/mdbnch.html">
+      MDBNCH</a>
+      is an executable FORTRAN77 program which 
+      is a benchmark code for a molecular dynamics calculation.
+    </p>
+
+    <p>
+      <a href = "../../f_src/memory_test/memory_test.html">
+      MEMORY_TEST</a>
+      is a FORTRAN90 program which
+      declares and uses a sequence of larger
+      and larger vectors, to see how big a vector can be used on a given
+      machine and compiler.
+    </p>
+
+    <p>
+      <a href = "../../f_src/timer/timer.html">
+      TIMER</a>
+      is a FORTRAN90 example which
+      demonstrates how to measure CPU time or elapsed time.
+    </p>
+
+    <h3 align = "center">
+      Reference:
+    </h3>
+
+    <p>
+      <ol>
+        <li>
+          <a href = "http://www.netlib.org/benchmark/1000s">
+                     http://www.netlib.org/benchmark/1000s</a>
+          the LINPACK benchmark website (single precision).
+        </li>
+        <li>
+          <a href = "http://www.netlib.org/benchmark/1000d">
+                     http://www.netlib.org/benchmark/1000d</a>
+          the LINPACK benchmark website (double precision).
+        </li>
+        <li>
+          Jack Dongarra,<br>
+          Performance of Various Computers Using Standard Linear Equations Software,
+          Technical Report CS-89-85,<br>
+          Electrical Engineering and Computer Science Department,<br>
+          University of Tennessee, 2008.
+        </li>
+        <li>
+          Jack Dongarra, Jim Bunch, Cleve Moler, Pete Stewart,<br>
+          LINPACK User's Guide,<br>
+          SIAM, 1979,<br>
+          ISBN13: 978-0-898711-72-1,<br>
+          LC: QA214.L56.
+        </li>
+        <li>
+          GS Fishman,<br>
+          Multiplicative congruential random number generators with modulus
+          2**b: an exhaustive analysis for b = 32 and a partial analysis for b = 48,<br>
+          Mathematics of Computation,<br>
+          Volume 189, 1990, pages 331-344.
+        </li>
+        <li>
+          Charles Lawson, Richard Hanson, David Kincaid, Fred Krogh,<br>
+          Algorithm 539: 
+          Basic Linear Algebra Subprograms for Fortran Usage,<br>
+          ACM Transactions on Mathematical Software,<br>
+          Volume 5, Number 3, September 1979, pages 308-323.
+        </li>
+      </ol>
+    </p>
+
+    <h3 align = "center">
+      Source Code:
+    </h3>
+
+    <p>
+      <ul>
+        <li>
+          <a href = "linpack_bench_d.java">linpack_bench_d.java</a>, 
+          the source code;
+        </li>
+      </ul>
+    </p>
+
+
+    <h3 align = "center">
+      Examples and Tests:
+    </h3>
+
+    <p>
+      <ul>
+        <li>
+          <a href = "linpack_bench_d_dhcp95_output.txt">linpack_bench_d_dhcp95_output.txt</a>, 
+          the output from DHCP95, an Apple G5;
+        </li>
+      </ul>
+    </p>
+
+    <hr>
+
+    <p>
+      You can go up one level to <a href = "../j_src.html">
+      the JAVA source codes</a>.
+    </p>
+
+    <hr>
+
+    <i>
+      Last revised on 07 March 2008.
+    </i>
+
+    <!-- John Burkardt -->
+
+  </body>
+
+</html>
